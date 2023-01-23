@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+	int sum = 0;
+	int naturalNumber = 2;
+	
+
+	while (naturalNumber <= 100) {
+		int x = 2;
+
+		bool naturalNumberIsPrime = true;
+		while (x < naturalNumber) {
+			if (naturalNumber % x == 0) {
+				naturalNumberIsPrime = false;
+				break;
+			}
+			x++;
+		}
+		if (naturalNumberIsPrime) {
+			cout << naturalNumber << " ";
+			sum += naturalNumber;
+		}
+		naturalNumber++;
+	}
+	cout << "\n\nSum=" << sum;
+	
+
+	
+	for (int x = 0; x < 101; x++) {
+		if (x % 3 == 0 || x % 5 == 0) {
+			sum = sum + x; 
+		}
+	}
+
+	cout << "\n\nThe sum of all integers between 0 and 100; divisible by either 3 or 5 is" << sum;
+
+	return 0;
+}
+
